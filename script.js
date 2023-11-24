@@ -7,7 +7,7 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
  let unOrder = document.createElement("ul");
   unOrder.id = "bands";
 
-const sortedBands = bands.map(band => band.replace(/\b(?:a|an|the)\b/gi, '').trim()).sort();
+const sortedBands = bands.map(band => band.replace(/\b(?:a|an)\b/gi, '').trim()).sort();
 
 sortedBands.forEach((band) =>{
 
