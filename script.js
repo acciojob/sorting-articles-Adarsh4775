@@ -5,13 +5,14 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
   document.body.appendChild(unDiv);
 
  let unOrder = document.createElement("ul");
-  unOrder.id = "band";
+  unOrder.id = "bands";
 
-bands.forEach((band) =>{
+const sortedBands = bands.map(band => band.replace(/\b(?:a|an|the)\b/gi, '').trim()).sort();
 
-	 let mBand = band.replace(/\b(?:a|an|the)\b/gi, '').trim();
+sortedBands.forEach((band) =>{
+
 	  let unLii = document.createElement("li");
-	   unLii.innerText = mBand;
+	   unLii.innerText = band;
 	   unOrder.appendChild(unLii);
 	   unDiv.appendChild(unOrder);
 	   
